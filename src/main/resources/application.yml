@@ -1,0 +1,21 @@
+server:
+  port: 10001
+
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+        git:
+          uri: https://github.com/huzhicheng/config-only-a-demo
+          username: 963937371@qq.com
+          password: Sirius1128$
+          default-label: master
+          search-paths: config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.4.4.208:10000/eureka
