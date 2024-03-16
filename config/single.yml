@@ -1,0 +1,57 @@
+server:
+  port: 11001
+  host: 10.4.4.208
+  id: 1
+  compression:
+    enabled: true
+  servlet:
+    session:
+      timeout: 30m
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.4.4.208:10000/eureka
+
+spring:
+  application:
+    name: single
+  cache:
+    cache-names: constructor,idField,dispatch,event,jpaRepository,entity
+    type: simple
+
+  data:
+    redis:
+      database: 1
+      host: 10.77.38.129
+      password: N2kH5lJVJLAHWObs
+      port: 6379
+  datasource:
+    url: jdbc:mysql://10.77.38.129:3306/game?characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: N2kH5lJVJLAHWObs
+  freemarker:
+    charset: UTF-8
+    settings:
+      classic_compatible: true
+    suffix: .ftl
+    template-loader-path: classpath:/templates/
+  jackson:
+    date-format: yyyy-MM-dd'T'HH:mm:ss
+    time-zone: GMT+8
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: false
+  mvc:
+    path-match:
+      matching-strategy: ant_path_matcher
+
+tcp:
+  port: 11002
+rmi:
+  port: 11003
+upload:
+  path: /data/littlebug/wwwroot/
