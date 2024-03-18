@@ -1,5 +1,5 @@
 server:
-  port: 11001
+  port: 10201
   host: 10.4.4.208
   id: 1
   compression:
@@ -15,7 +15,7 @@ eureka:
 
 spring:
   application:
-    name: single
+    name: alone-2
   cache:
     cache-names: constructor,idField,dispatch,event,jpaRepository,entity
     type: simple
@@ -51,8 +51,8 @@ springdoc:
     path: /swagger.html
 
 tcp:
-  port: 11002
+  port: 20201
 rmi:
-  port: 11003
+  port: 30201
 upload:
   path: /data/littlebug/wwwroot/
